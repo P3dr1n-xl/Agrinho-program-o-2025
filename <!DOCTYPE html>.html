@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vida Rural e Urbana: Um Portal Educativo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner" aria-label="Topo do site">
+    <div class="nav-inner container">
+      <div class="logo" aria-label="Logo Vida Rural e Urbana">Vida Rural e Urbana</div>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#voce-sabia">Você sabia?</a></li>
+          <li><a href="#campo-produz">Campo produz, cidade consome</a></li>
+          <li><a href="#inovacoes-conectam">Inovações que conectam</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-labelledby="hero-title">
+      <h1 id="hero-title">Vida Rural e Urbana: um portal educativo para jovens</h1>
+      <p>Descubra como o campo e a cidade são interdependentes e aprendam juntos sobre esse elo essencial.</p>
+      <button class="btn-primary" aria-label="Explorar conteúdo do portal">Explorar Conteúdo</button>
+    </section>
+
+    <section id="voce-sabia" class="you-sabia container" role="region" aria-labelledby="you-sabia-title">
+      <h2 id="you-sabia-title">Você sabia?</h2>
+      <div class="cards-grid">
+        <article class="card" tabindex="0">
+          <div class="icon-circle" aria-hidden="true">🌾</div>
+          <h3>Agricultura Sustentável</h3>
+          <p>A agricultura moderna utiliza técnicas sustentáveis que preservam o solo e aumentam a produtividade.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <div class="icon-circle" aria-hidden="true">🐄</div>
+          <h3>Pecuária e Meio Ambiente</h3>
+          <p>A pecuária bem gerida contribui para o equilíbrio ambiental, respeitando os ciclos naturais.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <div class="icon-circle" aria-hidden="true">🚛</div>
+          <h3>Transporte e Distribuição</h3>
+          <p>O transporte eficiente conecta a produção rural aos centros urbanos, garantindo frescor e qualidade.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <div class="icon-circle" aria-hidden="true">📱</div>
+          <h3>Tecnologia no Campo e na Cidade</h3>
+          <p>Aplicativos e sistemas digitais facilitam a comunicação e o comércio entre campo e cidade.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="campo-produz" class="exchange container" role="region" aria-labelledby="campo-produz-title">
+      <h2 id="campo-produz-title">Campo produz, cidade consome</h2>
+      <div class="exchange-graphics" aria-label="Gráficos mostrando a troca entre campo e cidade">
+        <div class="bar-chart" role="img" aria-label="Produção agrícola 85%">
+          <h3>Agricultura</h3>
+          <div class="bar" aria-hidden="true">
+            <div class="bar-fill agriculture" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="bar-chart" role="img" aria-label="Pecuária 70%">
+          <h3>Pecuária</h3>
+          <div class="bar" aria-hidden="true">
+            <div class="bar-fill livestock" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="bar-chart" role="img" aria-label="Transporte 65%">
+          <h3>Transporte</h3>
+          <div class="bar" aria-hidden="true">
+            <div class="bar-fill transport" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="bar-chart" role="img" aria-label="Tecnologia 80%">
+          <h3>Tecnologia</h3>
+          <div class="bar" aria-hidden="true">
+            <div class="bar-fill technology" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inovacoes-conectam" class="innovations container" role="region" aria-labelledby="inovacoes-conectam-title">
+      <h2 id="inovacoes-conectam-title">Inovações que conectam</h2>
+      <div class="cards-grid">
+        <article class="card" tabindex="0">
+          <h3>Agricultura Urbana</h3>
+          <p>Hortas comunitárias e projetos de cultivo em ambientes urbanos aproximam campo e cidade.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Delivery de Produtos Locais</h3>
+          <p>Aplicativos facilitam a entrega direta de alimentos frescos do campo para a sua casa.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <h3>Apps Rurais</h3>
+          <p>Ferramentas digitais ajudam produtores a gerenciar plantações e vender para cidades com facilidade.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Animate the bars on page load
+    window.addEventListener('load', () => {
+      const fills = document.querySelectorAll('.bar-fill');
+      fills.forEach(fill => {
+        const classes = fill.classList;
+        if (classes.contains('agriculture')) fill.style.width = '85%';
+        else if (classes.contains('livestock')) fill.style.width = '70%';
+        else if (classes.contains('transport')) fill.style.width = '65%';
+        else if (classes.contains('technology')) fill.style.width = '80%';
+      });
+    });
+  </script>
+</body>
+</html>
+
